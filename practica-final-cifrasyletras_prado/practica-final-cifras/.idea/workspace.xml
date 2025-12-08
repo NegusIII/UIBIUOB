@@ -3,6 +3,11 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -13,7 +18,9 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated />
+    <generated>
+      <config projectName="practica_final_cifras" targetName="practica_final_cifras" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -22,26 +29,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b88bf6a-9139-4227-a35e-1864c15191e5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/practica-final-cifrasyletras.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/.idea/practica-final-cifrasyletras.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Doxyfile.in" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/Doxyfile.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/diccionario.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/data/diccionario.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/letras.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/data/letras.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/mainpage.dox" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/doc/mainpage.dox" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/bag.h" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/include/bag.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/dictionary.h" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/include/dictionary.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/letters_bag.h" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/include/letters_bag.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/letters_set.h" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/include/letters_set.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bolsa.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/src/bolsa.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dictionary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/src/dictionary.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/letters_bag.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/src/letters_bag.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/letters_set.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../practica-final-cifras/src/letters_set.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cifras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cifras.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +45,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="2.5" />
+    <option name="productBranch" value="Classic" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -63,28 +59,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ed/Escritorio/ED_/UIBIUOB/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifrasyletras&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.practica_final_cifras.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/ed/Escritorio/ED_/UIBIUOB/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifrasyletras",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="practica_final_cifras" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica_final_cifras" TARGET_NAME="practica_final_cifras" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica_final_cifras" RUN_TARGET_NAME="practica_final_cifras">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -98,6 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1764068853027</updated>
       <workItem from="1764068855198" duration="404000" />
+      <workItem from="1765191923913" duration="14209000" />
     </task>
     <servers />
   </component>
