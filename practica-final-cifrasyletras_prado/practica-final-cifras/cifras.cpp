@@ -38,12 +38,11 @@ bool calcular(vector<int> v, int objetivo) {
     while (!solucionado && i < v.size()){
         if (v[i] != 0 && objetivo % v[i] == 0){
             int num=v[i];
-
             vector<int> copia = v;
             copia.erase(copia.begin()+i);
             solucionado = calcular(copia, objetivo/num);
-            string operacion = to_string(objetivo/num) + "*" + to_string(num) = to_string(objetivo);
-            if (solucionado) soluciones.push_back(operacion);
+            int nuevo_obj=objetivo/num;
+            if (solucionado) soluciones.push_back(to_string(nuevo_obj) + "*" + to_string(v[i]) + "=" + to_string(objetivo));
             else i++;
         }
         else {
