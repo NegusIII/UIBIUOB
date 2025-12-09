@@ -28,7 +28,8 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/bolsa.cpp)
     ${BASE_FOLDER}/src/bolsa.cpp
     ${BASE_FOLDER}/src/letters_bag.cpp
     ${BASE_FOLDER}/src/letters_set.cpp
-    ${BASE_FOLDER}/src/dictionary.cpp)
+    ${BASE_FOLDER}/src/dictionary.cpp
+          src/testdiccionario.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/bolsa_letras.cpp)
