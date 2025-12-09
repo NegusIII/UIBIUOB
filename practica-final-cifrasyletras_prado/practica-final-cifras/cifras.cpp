@@ -36,14 +36,17 @@ bool calcular(vector<int> v, int objetivo) {
     int i = 0;
     bool solucionado = false;
     while (!solucionado && i < v.size()){
-        if (v[i] != 0 && objetivo % v[i] == 0){
+        if (v[i] != 0 && v[i] != 1&& objetivo % v[i] == 0){
             int num=v[i];
             vector<int> copia = v;
             copia.erase(copia.begin()+i);
-            solucionado = calcular(copia, objetivo/num);
             int nuevo_obj=objetivo/num;
-            if (solucionado) soluciones.push_back(to_string(nuevo_obj) + "*" + to_string(v[i]) + "=" + to_string(objetivo));
-            else i++;
+            int pos_antes = soluciones.size();
+            solucionado = calcular(copia, nuevo_obj);
+            if (solucionado) {
+                string nueva = to_string(nuevo_obj) + "*" + to_string(v[i]) + "=" + to_string(objetivo);
+                soluciones.insert(soluciones.begin() + pos_antes, nueva);
+            }else i++;
         }
         else {
             i++;
@@ -89,7 +92,7 @@ bool calcular(vector<int> v, int objetivo) {
 
             if (num > 0) {
                 if (num==objetivo) {
-                    soluciones.push_back(to_string(actual) + "-" + to_string(v[i]) + "=" + to_string(num));
+                    soluciones.push_back(to_string(v[i]) + "-" + to_string(actual) + "=" + to_string(num));
                     return true;
                 }
 
@@ -112,7 +115,7 @@ bool calcular(vector<int> v, int objetivo) {
             if (v[i]%v[j]==0) {
                 int num = v[i]/v[j];
                 if (num==objetivo) {
-                    soluciones.push_back(to_string(actual) + "/" + to_string(v[i]) + "=" + to_string(num));
+                    soluciones.push_back(to_string(v[i]) + "/" + to_string(actual) + "=" + to_string(num));
                     return true;
                 }
                 copia.erase(copia.begin()+i);
@@ -177,7 +180,7 @@ int main() {
         reverse(soluciones.begin(), soluciones.end());
         for (int i = 0; i < soluciones.size(); i++) {
 
-            cout << soluciones[i] << endl;;
+            cout << i+1 << ". " << soluciones[i] << endl;
         }
     }
     else cout << "No hay soluciones";

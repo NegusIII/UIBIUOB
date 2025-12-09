@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/ed/Escritorio/ED_/UIBIUOB/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifras/cmake-build-debug"
+			"value" : "/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifras/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "0"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -115,7 +115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -559,7 +559,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/ed/Escritorio/ED_/UIBIUOB/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifras/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifras/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -619,7 +619,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/ed/Escritorio/ED_/UIBIUOB/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifras"
+			"value" : "/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifras"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -683,7 +683,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/snap/clion/401/bin/ninja/linux/x64/ninja"
+			"value" : "/snap/clion/405/bin/ninja/linux/x64/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -838,6 +838,18 @@
 			"value" : "1"
 		},
 		{
+			"name" : "CMAKE_PROJECT_COMPAT_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : ""
+		},
+		{
 			"name" : "CMAKE_PROJECT_DESCRIPTION",
 			"properties" : 
 			[
@@ -915,7 +927,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/401/bin/cmake/linux/x64/share/cmake-4.0"
+			"value" : "/snap/clion/405/bin/cmake/linux/x64/share/cmake-4.1"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1039,7 +1051,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during all build types."
+					"value" : "Flags used by the archiver during the creation of static libraries during all build types."
 				}
 			],
 			"type" : "STRING",
@@ -1055,7 +1067,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during DEBUG builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during DEBUG builds."
 				}
 			],
 			"type" : "STRING",
@@ -1071,7 +1083,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during MINSIZEREL builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during MINSIZEREL builds."
 				}
 			],
 			"type" : "STRING",
@@ -1087,7 +1099,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during RELEASE builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during RELEASE builds."
 				}
 			],
 			"type" : "STRING",
@@ -1103,7 +1115,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Flags used by the linker during the creation of static libraries during RELWITHDEBINFO builds."
+					"value" : "Flags used by the archiver during the creation of static libraries during RELWITHDEBINFO builds."
 				}
 			],
 			"type" : "STRING",
@@ -1179,7 +1191,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/ed/Escritorio/ED_/UIBIUOB/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifras/cmake-build-debug"
+			"value" : "/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifras/cmake-build-debug"
 		},
 		{
 			"name" : "practica_final_cifras_IS_TOP_LEVEL",
@@ -1203,7 +1215,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/ed/Escritorio/ED_/UIBIUOB/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifras"
+			"value" : "/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-cifras"
 		}
 	],
 	"kind" : "cache",
