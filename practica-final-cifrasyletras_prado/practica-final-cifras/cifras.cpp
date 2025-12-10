@@ -78,7 +78,6 @@ bool calcular(vector<int> v, int objetivo) {
             if (i < j) copia.erase(copia.begin() +j-1);
             else copia.erase(copia.begin()+j);
             copia.push_back(num);
-            tam--;
             solucionado = calcular(copia, objetivo);
             if (solucionado) soluciones.push_back(to_string(actual) + "+" + to_string(v[i]) + "=" + to_string(num));
             ++j;
@@ -101,7 +100,6 @@ bool calcular(vector<int> v, int objetivo) {
                 if (i < j) copia.erase(copia.begin() +j-1);
                 else copia.erase(copia.begin()+j);
                 copia.push_back(num);
-                tam--;
                 solucionado = calcular(copia, objetivo);
                 if (solucionado) soluciones.push_back(to_string(v[i]) + "-" + to_string(actual) + "=" + to_string(num));
             }
@@ -122,7 +120,6 @@ bool calcular(vector<int> v, int objetivo) {
                 if (i < j) copia.erase(copia.begin() +j-1);
                 else copia.erase(copia.begin()+j);
                 copia.push_back(num);
-                tam--;
                 solucionado = calcular(copia, objetivo);
                 if (solucionado) soluciones.push_back(to_string(v[i]) + "/" + to_string(actual) + "=" + to_string(num));
             }
@@ -143,7 +140,6 @@ bool calcular(vector<int> v, int objetivo) {
             if (i < j) copia.erase(copia.begin() +j-1);
             else copia.erase(copia.begin()+j);
             copia.push_back(num);
-            tam--;
             solucionado = calcular(copia, objetivo);
             if (solucionado) soluciones.push_back(to_string(actual) + "*" + to_string(v[i]) + "=" + to_string(num));
             ++j;
@@ -159,8 +155,8 @@ bool EsMagica(vector<int> v) {
 
     bool esMagica = true;
     int i = 101;
-    while (i < 1000) {
-        if (!calcular(v,i)){ esMagica=false; cout << i << ", ";}
+    while (i < 1000 && esMagica) {
+        if (!calcular(v,i)) esMagica=false;
         i++;
     }
     return esMagica;
@@ -168,8 +164,7 @@ bool EsMagica(vector<int> v) {
 
 int main() {
 
-    //vector<int> v = v_aleatorio();
-    vector<int> v = {2,6,7,9,50,75};
+    vector<int> v = v_aleatorio();
 
     cout << "Numeros: [";
     for (int i = 0; i < v.size(); i++) {
