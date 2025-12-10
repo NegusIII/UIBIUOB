@@ -155,9 +155,21 @@ bool calcular(vector<int> v, int objetivo) {
     return solucionado;
 }
 
+bool EsMagica(vector<int> v) {
+
+    bool esMagica = true;
+    int i = 101;
+    while (i < 1000) {
+        if (!calcular(v,i)){ esMagica=false; cout << i << ", ";}
+        i++;
+    }
+    return esMagica;
+}
+
 int main() {
 
-    vector<int> v = v_aleatorio();
+    //vector<int> v = v_aleatorio();
+    vector<int> v = {2,6,7,9,50,75};
 
     cout << "Numeros: [";
     for (int i = 0; i < v.size(); i++) {
@@ -182,9 +194,10 @@ int main() {
 
             cout << i+1 << ". " << soluciones[i] << endl;
         }
+        if (EsMagica(v)) cout << "Es magica" << endl;
+        else cout << "No es magica" << endl;
     }
-    else cout << "No hay soluciones";
-
+    else cout << "No hay soluciones" << endl << "No es magica";
 
     return 0;
 }
