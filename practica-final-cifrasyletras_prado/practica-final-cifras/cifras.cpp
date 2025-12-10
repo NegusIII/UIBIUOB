@@ -154,7 +154,7 @@ bool calcular(vector<int> v, int objetivo) {
 bool EsMagica(vector<int> v) {
 
     bool esMagica = true;
-    int i = 101;
+    int i = 100;
     while (i < 1000 && esMagica) {
         if (!calcular(v,i)) esMagica=false;
         i++;
