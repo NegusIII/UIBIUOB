@@ -1,5 +1,6 @@
 #ifndef __LETTER_SET_H__
 #define __LETTER_SET_H__
+#include <iosfwd>
 
 /**
  * @brief TDA LetterInfo
@@ -18,4 +19,55 @@
  * que tenemos de la letra y la puntuación que dicha letra otorga cuando se
  * utiliza en una palabra
  */
+class LettersSet {
+private:
+    //Creamos un registro interno para guardar la informacion sobre cada letra
+    struct LetterInfo {
+        int repeticiones;
+        int puntuacion;
+    };
+    //Usamos un map para asociar cada caracter con su informacion, de esta forma
+    //es mas sencillo encontrar los puntos asociados a una letra concreta
+    map<char, LetterInfo> letters;
+
+public:
+    /**
+     * @brief Constructor por defecto
+     */
+    LettersSet();
+
+    /**
+     * @brief Metodo que inserta una letra en el conjunto
+     * @param val: caracter de la letra
+     * @param cantidad: cantidad de veces que aparece la letra
+     * @param puntuacion: puntuacion de la letra
+     */
+    void Insert(const char & val, const int & cantidad, const int & puntuacion);
+
+    /**
+     * @brief Calcula la puntuacion de una palabra completa
+     * @param palabra: palabra a evaluar
+     * @return Suma de los puntos de cada letra. Devuelve 0 si alguna letra no existe
+     */
+    int getPuntuacion(string palabra);
+
+    /**
+     * @brief Obteine el mapa completo de letras (sera util para la Bolsa)
+     * @return Referencia constante al mapa interno de la clase
+     */
+    const map<char, LetterInfo>& getLetters() const;
+
+    /**
+     * @brief Sobrecarga del operador de entrada
+     * Lee el archivo letras.txt saltandose la cabecera
+     */
+    friend istream & operator>>(istream & is, LettersSet & cl);
+
+    /**
+     * @brief Sobrecarga del operador de salida
+     * Muestra las letras y sus propiedades
+     */
+    friend ostream & operator<<(ostream & os, const LettersSet & cl);
+
+};
 #endif
