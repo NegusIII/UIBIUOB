@@ -1,6 +1,9 @@
 #ifndef __LETTER_SET_H__
 #define __LETTER_SET_H__
-#include <iosfwd>
+
+#include <map>
+#include <iostream>
+
 
 /**
  * @brief TDA LetterInfo
@@ -28,7 +31,7 @@ private:
     };
     //Usamos un map para asociar cada caracter con su informacion, de esta forma
     //es mas sencillo encontrar los puntos asociados a una letra concreta
-    map<char, LetterInfo> letters;
+    std::map<char, LetterInfo> letters;
 
 public:
     /**
@@ -49,25 +52,25 @@ public:
      * @param palabra: palabra a evaluar
      * @return Suma de los puntos de cada letra. Devuelve 0 si alguna letra no existe
      */
-    int getPuntuacion(string palabra);
+    int getPuntuacion(std::string palabra);
 
     /**
      * @brief Obteine el mapa completo de letras (sera util para la Bolsa)
      * @return Referencia constante al mapa interno de la clase
      */
-    const map<char, LetterInfo>& getLetters() const;
+    const std::map<char, LetterInfo>& getLetters() const;
 
     /**
      * @brief Sobrecarga del operador de entrada
      * Lee el archivo letras.txt saltandose la cabecera
      */
-    friend istream & operator>>(istream & is, LettersSet & cl);
+    friend std::istream & operator>>(std::istream & is, LettersSet & cl);
 
     /**
      * @brief Sobrecarga del operador de salida
      * Muestra las letras y sus propiedades
      */
-    friend ostream & operator<<(ostream & os, const LettersSet & cl);
+    friend std::ostream & operator<<(std::ostream & os, const LettersSet & cl);
 
 };
 #endif

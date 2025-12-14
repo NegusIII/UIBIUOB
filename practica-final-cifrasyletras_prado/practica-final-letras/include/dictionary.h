@@ -13,7 +13,7 @@ public:
     /**
     @brief Construye un diccionario vacío.
     **/
-    Diccionario()
+    Diccionario();
     /**
     8
     #Letra Cantidad Puntos
@@ -44,6 +44,8 @@ public:
     @brief Devuelve el numero de palabras en el diccionario
     **/
     int size() const ;
+
+    set<string> getDatos();
     /**
     @brief Obtiene todas las palabras en el diccionario de un longitud dada
     @param longitud: la longitud de las palabras de salida
@@ -71,6 +73,7 @@ public:
     **/
     friend ostream & operator<<(ostream & os, const Diccionario &D);
 
+
     class iterator{
         private:
             set<string>::iterator it;
@@ -79,11 +82,12 @@ public:
 
             string operator *();
             iterator & operator ++();
-            bool operator ==(const iterator &i)
-            bool operator !=(const iterator &i)
+            bool operator ==(const iterator &i);
+            bool operator !=(const iterator &i);
             friend class Diccionario;
         };
         iterator begin();
         iterator end();
 };
+
 #endif

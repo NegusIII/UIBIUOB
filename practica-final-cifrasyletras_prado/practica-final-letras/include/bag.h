@@ -1,8 +1,8 @@
 #ifndef __BAG_H__
 #define __BAG_H__
-#include <cstdlib>
-#include <stdlib.h>
 #include <vector>
+
+using namespace std;
 
 /**
  *  \brief TDA abstracto Bolsa

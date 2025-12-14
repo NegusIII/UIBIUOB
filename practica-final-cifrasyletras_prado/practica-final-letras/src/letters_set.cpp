@@ -20,7 +20,7 @@ int LettersSet::getPuntuacion(string palabra) {
     for (unsigned int i = 0; i < palabra.length(); i++) {
         char c = palabra[i];
         //Convertimos a mayuscula
-        char c = toupper(c);
+        c = toupper(c);
         if (letters.count(c)) {
             puntuacion_total += letters.at(c).puntuacion;
         }
@@ -28,7 +28,7 @@ int LettersSet::getPuntuacion(string palabra) {
     return puntuacion_total;
 }
 
-const map<char, LetterInfo>& LettersSet::getLetters() const {
+const map<char, LettersSet::LetterInfo>& LettersSet::getLetters() const {
     return letters;
 }
 
@@ -38,7 +38,10 @@ istream & operator>>(istream & is, LettersSet & cl) {
     //Saltamos la cabecera
     getline(is, cabecera);
 
+    char letra;
+    int cantidad, puntos;
     //Luego leemos mientras haya datos
+
     while (is >> letra >> cantidad >> puntos) {
         cl.Insert(letra, cantidad, puntos);
     }

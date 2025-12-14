@@ -2,6 +2,9 @@
 
 #include <set>
 #include <string>
+#include <iostream>
+
+using namespace std;
 
 Diccionario::Diccionario():datos(){}
 
@@ -13,18 +16,22 @@ vector<string> Diccionario::PalabrasLongitud(int longitud) {
     vector<string> v;
 
     for (set<string>::iterator it=datos.begin(); it !=datos.end(); ++it) {
-
-        if (*it->length()==longitud) v.push_back(*it);
+        string actual = *it;
+        if (actual.length()==longitud) v.push_back(actual);
     }
     return v;
 }
 
+set<string> Diccionario::getDatos() {
+    return datos;
+}
+
 bool Diccionario::Esta(string palabra) {
-    return (datos.find() != datos.end());
+    return (datos.find(palabra) != datos.end());
 }
 
 //METODOS DE LA CLASE ITERATOR
-Diccionario::iterator::operator*{
+string Diccionario::iterator::operator*(){
     return *it;
 }
 
@@ -58,7 +65,7 @@ Diccionario::iterator Diccionario::end() {
 istream & operator>>(istream & is, Diccionario &D) {
     string palabra;
     while (is>>palabra) {
-        D.datos.insert(palabra);
+        D.getDatos().insert(palabra);
     }
     return is;
 }
@@ -66,7 +73,7 @@ istream & operator>>(istream & is, Diccionario &D) {
 ostream & operator<<(ostream & os, Diccionario &D) {
     set<string>::const_iterator it;
 
-    for (it = D.datos.begin(); it != D.datos.end(); ++it) {
+    for (it = D.getDatos().begin(); it != D.getDatos().end(); ++it) {
         os << *it << endl;
     }
     return os;
