@@ -2,10 +2,68 @@
 
 # Introducción
 
-A RELLENAR POR EL ESTUDIANTE
+El objetivo de la práctica es la implementación de la parte del juego de las **Letras** (perteneciente al juego de *Cifras y Letras*).
+Para ello, hemos diseñado e implementado Estructuras de Datos eficientes que permiten gestionar diccionarios de gran tamaño, conjuntos de reglas de puntuación y bolsas de extracción aleatoria.
 
-# Ejecutables
+El núcleo del proyecto se basa en la modularidad y el uso eficiente de la STL de de C++ (`std::set`, `std::map`, `std::vector`, `std::list`).
 
-A RELLENAR POR EL ESTUDIANTE
+---
+# Estructura del Proyecto y TDA Implementados
+
+Para resolver este problema se han diseñado los siguientes Tipos de Datos Abstractos:
+
+## 1. TDA LettsersSet (Conjunto de Letras)
+Encargado de gestionar la información estática del juego, es decir, las reglas del mismo.
+* **Representación:** Se ha utilizado un 'std::map<char, LetterInfo>' para asociar cada una de las letras con su estructura de información (repeticiones permitidas y puntuación)
+* **Justificación:** El uso de un map permite un acceso directo y rápido (logarítmico) a la información de cualquier letra para calcular puntuaciones, sin necesidad de recorrer estructuras lineales.
+* **Funcionalidad clave:** Incluye el método `getPuntuacion(string)` que calcula el valor total de una palabra sumando los puntos individuales de sus caracteres.
+
+## 2. TDA Diccionario
+Encargado de almacenar todas las palabras válidas del idioma.
+* **Representación:** Se utiliza un 'std::set<string>'.
+* **Justificación:** El 'set' mantiene las palabras ordendas alfabéticamente de manera automática y evita los duplicados. Además, la búsqueda de palabras con 'Esta()' es muy eficiente ($O(\log n)$).
+* **Iteradores:** Se ha implementado una clase anidada 'iterator' que permite recorre el diccionario de forma estandarizada, esta clase es compatible con los bucles for y con algoritmos de la STL.
+
+## 3. TDA Bag (Bolsa Genérica)
+Una plantilla de la clase ('template <class T>') que permite almacenar elementos y extraerlos aleatoriamente sin reemplazo.
+* **Representación:** Utiliza un 'std::vector<T>' interno.
+* **Eficiencia:** Para el método 'get()', se ha implementado una estrategia llamada "Swap and Pop", que en lugar de borrar un elemento del medio (que obliga a mover el resto), se copia el último elemento en la posicion del elegido y se elimina el último elemento. Esto convierte la extracción en una operación de tiempo constante $O(1)$.
+
+## 4. TDA LettersBag (Bolsa de Letras Específica)
+Especialización para el juego que se rellena usando la información de un 'LettersSet'.
+* **Representación:** Utiliza internamente una 'std::list<char>' para gestionar las letras disponibles en la mano actual.
+* **Funcionalidad:** El constructor recibe el conjunto de letras y rellena la bolsa repitiendo cada carácter tantas veces como indique su configuración. Permite extraer conjuntos de letras ('extrar_varias') para formar la mano del jugador.
+
+---
+
+# Ejecutables y Algoritmos
+
+El proyecto genera tres programas principales que utilizan las estructuras anteriores:
+
+## 1. Cantidad de Letras ('cantidad_letras')
+Herramienta de análisis estadístico.
+* **Propósito:** Generar un nuevo fichero de letras con puntuaciones recalculadas en base a la frecuencia real de uso en el diccionario.
+* **Algoritmo:**
+    1. Carga el diccionario y el conjunto de letras original
+    2. Recorre el diccionario completo contando las apariciones de cada carácter (frecuencia absoluta).
+    3. Aplica una fórmula de interpolación inversa: las letras más frecuentes reciben 1 punto y las menos frecuentes hasta 10 puntos.
+    4. Escribe el resultado en un fichero de salida.
+
+## 2. Test Diccionario ('test_diccionario')
+Programa de comprobación del TDA.
+* **Propósito:** Verificar que la carga del diccionario, el recorrido con iteradores y la búsqueda de palabras funcionan correctamente.
+* **Funcionalidad:** Muestra el contenido del diccionario, filtra las palabras por longitud y permite al usuario consultar la existencia de términos específicos.
+
+## 3. Juego de las Letras ('letras')
+El programa principal de la simulación.
+* **Flujo de ejecución:**
+    1. Carga el diccionario y el fichero de las reglas.
+    2. Genera una "mano" de letras aleatorias usando 'LettersBag'.
+    3. Solicita una solución al usuario y valida que sea correcta, es decir, que usa las letras disponibles y que se encuentra en el diccionario.
+    4. **Algoritmo de la Solución: **
+        * El programa busca las mejores soluciones posibles recorriendo el diccionario completo.
+        * Para cada palabra del diccionario, comprueba si es posible formarla con las letras disponibles (usando contadores de frecuencia).
+        * Filtra las palabras válidas según el modo de juego: **Longitud** (busca la más larga) o **Puntuación** (busca la de mayor valor según 'LettersSet').
+    5. Muestra la puntuación del usuario comparada con las mejores soluciones encontradas por la máquina.
 
 */

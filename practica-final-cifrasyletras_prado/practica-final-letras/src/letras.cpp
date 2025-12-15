@@ -84,7 +84,7 @@ int main(int argc, char *argv[]) {
     }
 
     if (argv[4][0] != 'L' && argv[4][0] != 'P') {
-        cout << "Error en el tipo de puntuacion" << endl;
+        cout << "Error: Tipo de puntuacion incorrecto." << endl;
         return 1;
     }
 
