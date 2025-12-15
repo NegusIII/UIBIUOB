@@ -66,30 +66,32 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+Hecho por: Sergio Salvador Gil, Néstor Eloy Gil Casado</h1>
+<h1><a class="anchor" id="autotoc_md1"></a>
 Introducción</h1>
 <p>El objetivo de la práctica es la implementación de la parte del juego de las <b>Letras</b> (perteneciente al juego de <em>Cifras y Letras</em>). Para ello, hemos diseñado e implementado Estructuras de Datos eficientes que permiten gestionar diccionarios de gran tamaño, conjuntos de reglas de puntuación y bolsas de extracción aleatoria.</p>
 <p>El núcleo del proyecto se basa en la modularidad y el uso eficiente de la STL de de C++ (<code>std::set</code>, <code>std::map</code>, <code>std::vector</code>, <code>std::list</code>).</p>
 <hr  />
- <h1><a class="anchor" id="autotoc_md2"></a>
+ <h1><a class="anchor" id="autotoc_md3"></a>
 Estructura del Proyecto y TDA Implementados</h1>
 <p>Para resolver este problema se han diseñado los siguientes Tipos de Datos Abstractos:</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md4"></a>
 1. TDA LettsersSet (Conjunto de Letras)</h2>
 <p>Encargado de gestionar la información estática del juego, es decir, las reglas del mismo. <b>Representación:</b> Se ha utilizado un 'std::map&lt;char, LetterInfo&gt;' para asociar cada una de las letras con su estructura de información (repeticiones permitidas y puntuación) <b>Justificación:</b> El uso de un map permite un acceso directo y rápido (logarítmico) a la información de cualquier letra para calcular puntuaciones, sin necesidad de recorrer estructuras lineales. <b>Funcionalidad clave:</b> Incluye el método <code>getPuntuacion(string)</code> que calcula el valor total de una palabra sumando los puntos individuales de sus caracteres.</p>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 2. TDA Diccionario</h2>
 <p>Encargado de almacenar todas las palabras válidas del idioma. <b>Representación:</b> Se utiliza un 'std::set&lt;string&gt;'. <b>Justificación:</b> El 'set' mantiene las palabras ordendas alfabéticamente de manera automática y evita los duplicados. Además, la búsqueda de palabras con 'Esta()' es muy eficiente ($O(\log n)$). <b>Iteradores:</b> Se ha implementado una clase anidada 'iterator' que permite recorre el diccionario de forma estandarizada, esta clase es compatible con los bucles for y con algoritmos de la STL.</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 3. TDA Bag (Bolsa Genérica)</h2>
 <p>Una plantilla de la clase ('template &lt;class T&gt;') que permite almacenar elementos y extraerlos aleatoriamente sin reemplazo. <b>Representación:</b> Utiliza un 'std::vector&lt;T&gt;' interno. <b>Eficiencia:</b> Para el método 'get()', se ha implementado una estrategia llamada "Swap and Pop", que en lugar de borrar un elemento del medio (que obliga a mover el resto), se copia el último elemento en la posicion del elegido y se elimina el último elemento. Esto convierte la extracción en una operación de tiempo constante $O(1)$.</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 4. TDA LettersBag (Bolsa de Letras Específica)</h2>
 <p>Especialización para el juego que se rellena usando la información de un '<a class="el" href="classLettersSet.html" title="TDA LetterInfo.">LettersSet</a>'. <b>Representación:</b> Utiliza internamente una 'std::list&lt;char&gt;' para gestionar las letras disponibles en la mano actual. <b>Funcionalidad:</b> El constructor recibe el conjunto de letras y rellena la bolsa repitiendo cada carácter tantas veces como indique su configuración. Permite extraer conjuntos de letras ('extrar_varias') para formar la mano del jugador.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 Ejecutables y Algoritmos</h1>
 <p>El proyecto genera tres programas principales que utilizan las estructuras anteriores:</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 1. Cantidad de Letras ('cantidad_letras')</h2>
 <p>Herramienta de análisis estadístico. <b>Propósito:</b> Generar un nuevo fichero de letras con puntuaciones recalculadas en base a la frecuencia real de uso en el diccionario. <b>Algoritmo:</b></p><ol type="1">
 <li>Carga el diccionario y el conjunto de letras original</li>
@@ -97,10 +99,10 @@ Ejecutables y Algoritmos</h1>
 <li>Aplica una fórmula de interpolación inversa: las letras más frecuentes reciben 1 punto y las menos frecuentes hasta 10 puntos.</li>
 <li>Escribe el resultado en un fichero de salida.</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 2. Test Diccionario ('test_diccionario')</h2>
 <p>Programa de comprobación del TDA. <b>Propósito:</b> Verificar que la carga del diccionario, el recorrido con iteradores y la búsqueda de palabras funcionan correctamente. <b>Funcionalidad:</b> Muestra el contenido del diccionario, filtra las palabras por longitud y permite al usuario consultar la existencia de términos específicos.</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 3. Juego de las Letras ('letras')</h2>
 <p>El programa principal de la simulación. <b>Flujo de ejecución:</b></p><ol type="1">
 <li>Carga el diccionario y el fichero de las reglas.</li>
