@@ -17,7 +17,7 @@ void LettersSet::Insert(const char & val, const int & cantidad, const int & punt
 int LettersSet::getPuntuacion(string palabra) {
     int puntuacion_total = 0;
 
-    for (unsigned int i = 0; i < palabra.length(); i++) {
+    for (int i = 0; i < palabra.length(); i++) {
         char c = palabra[i];
         //Convertimos a mayuscula
         c = toupper(c);
