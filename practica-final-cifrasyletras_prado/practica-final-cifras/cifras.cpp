@@ -151,6 +151,8 @@ bool calcular(vector<int> v, int objetivo) {
     return solucionado;
 }
 
+// Función que comprueba todas las combinaciones de 100 a 999 para ver si una cadena de números es mágica
+
 bool EsMagica(vector<int> v) {
 
     bool esMagica = true;
@@ -163,6 +165,8 @@ bool EsMagica(vector<int> v) {
 }
 
 int main() {
+
+    //inicialización de la cadena aleatoria de números
 
     vector<int> v = v_aleatorio();
 
@@ -177,10 +181,14 @@ int main() {
 
     cout << "]" << endl;
 
+    // Inicialización del número objetivo
+
     uniform_int_distribution<> dist(100, 999);
     int objetivo = dist(generador);
 
     cout << "Objetivo: " << objetivo << endl;
+
+    //Salida
 
     if (calcular(v, objetivo)) {
 
