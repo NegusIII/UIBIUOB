@@ -2,19 +2,22 @@
 #include <fstream>
 #include <string>
 #include <map>
-#include <vector>
 #include <cstdlib>
 #include <cctype> // Para toupper
 
-#include "diccionary.h"
+#include "dictionary.h"
 #include "letters_set.h"
 using namespace std;
+
+/* EJECUTAR
+./bin/cantidad_letras ./data/diccionario.txt ./data/letras.txt salida.txt
+*/
 
 int main(int argc, char* argv[]) {
     //1-Comprobamos que la cantidad de parametros es correcta
     if (argc != 4) {
         cout << "Error: Numero de parametros incorrecto." << endl;
-        cout << "Uso: " << argv[0] << <fichero_diccionario> <fichero_letras> <fichero_salida>" << endl;
+        cout << "Uso: " << argv[0] << "<fichero_diccionario> <fichero_letras> <fichero_salida>" << endl;
         return 1;
     }
 

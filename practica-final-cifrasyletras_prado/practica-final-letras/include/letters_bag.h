@@ -4,6 +4,8 @@
 #include <list>
 #include <vector>
 #include <iostream>
+#include "letters_set.h"
+
 
 
 /**
@@ -25,6 +27,12 @@ class LettersBag {
         LettersBag();
 
         /**
+         * @brief constructor de la clase LettersBag que recibe un LettersSet
+         * @param letras_info
+         */
+        LettersBag(const LettersSet & letras_info);
+
+        /**
          * @brief metodo que inserta un caracter en la bolsa
          *
          * @param c
@@ -42,7 +50,7 @@ class LettersBag {
          *
          * @return el tamaño de la bolsa
          */
-        int size(); const
+        int size() const;
 
 
         /**

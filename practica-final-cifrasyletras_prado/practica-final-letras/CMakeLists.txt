@@ -53,6 +53,11 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/palabras_longitud.cpp)
     ${BASE_FOLDER}/src/dictionary.cpp)
 endif()
 
+add_executable(testdiccionario src/testdiccionario.cpp src/dictionary.cpp)
+add_executable(letras src/letras.cpp src/letters_set.cpp src/dictionary.cpp src/bag.cpp src/letters_bag.cpp)
+
+
+
 # ==============================================================
 # Doxygen (documentación)
 # ==============================================================

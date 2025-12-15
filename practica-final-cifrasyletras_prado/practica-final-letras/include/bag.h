@@ -1,6 +1,7 @@
 #ifndef __BAG_H__
 #define __BAG_H__
 #include <vector>
+#include <random>
 
 using namespace std;
 

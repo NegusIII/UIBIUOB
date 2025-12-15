@@ -23,12 +23,16 @@
  * utiliza en una palabra
  */
 class LettersSet {
-private:
-    //Creamos un registro interno para guardar la informacion sobre cada letra
+
+public:
+
     struct LetterInfo {
         int repeticiones;
         int puntuacion;
     };
+private:
+    //Creamos un registro interno para guardar la informacion sobre cada letra
+
     //Usamos un map para asociar cada caracter con su informacion, de esta forma
     //es mas sencillo encontrar los puntos asociados a una letra concreta
     std::map<char, LetterInfo> letters;

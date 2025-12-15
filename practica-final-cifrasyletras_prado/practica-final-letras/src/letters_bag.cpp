@@ -6,6 +6,19 @@ using namespace std;
 
 LettersBag::LettersBag() {}
 
+LettersBag::LettersBag(const LettersSet &set_letters) {
+    map<char, LettersSet::LetterInfo> set = set_letters.getLetters();
+
+    map<char, LettersSet::LetterInfo>::iterator it;
+    for (it = set.begin(); it != set.end(); ++it) {
+        char actual=it->first;
+        int cantidad=it->second.repeticiones;
+        for (int i=0; i<cantidad; i++) {
+            insertar(actual);
+        }
+    }
+}
+
 void LettersBag::insertar(char c) {
     letras.push_back(c);
 }
@@ -30,7 +43,7 @@ int LettersBag::size() const {
     return letras.size();
 }
 
-const void LettersBag::clear() {
+void LettersBag::clear() {
 
     letras.clear();
 }

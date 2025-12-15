@@ -3,7 +3,7 @@
 #include <ctime>
 #include <string>
 #include "bag.h"
-
+/*
 using namespace std;
 
 int main(int argc, char *argv[])
@@ -44,3 +44,4 @@ int main(int argc, char *argv[])
 
   return 0;
 }
+*/

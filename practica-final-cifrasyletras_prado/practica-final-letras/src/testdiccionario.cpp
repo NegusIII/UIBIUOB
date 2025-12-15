@@ -26,7 +26,7 @@ int main(int argc, char * argv[]){
     cout<<"Leido el diccionario..."<<endl;
     cout<<D;
     int longitud;
-    cout<<"Dime la longitud de las palabras que quieres ver";
+    cout<<"Dime la longitud de las palabras que quieres ver: ";
     cin>>longitud;
     vector<string> v=D.PalabrasLongitud(longitud);
     cout<<"Palabras de Longitud "<<longitud<<endl;
@@ -34,6 +34,8 @@ int main(int argc, char * argv[]){
     string p;
     cout<<"Dime una palabra: ";
     cin>>p;
-    if (D.Esta(p)) cout<<"Sí esa palabra existe";
-    else cout<<"Esa palabra no existe";
+    if (D.Esta(p)) cout<<"Sí esa palabra existe" << endl;
+    else cout<<"Esa palabra no existe" << endl;
+
+    return 0;
 }

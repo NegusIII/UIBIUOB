@@ -49,6 +49,9 @@ bool Diccionario::iterator::operator!=(const iterator &i) {
 }
 
 //GENERADORES DE ITERADORES
+Diccionario::iterator::iterator() {}
+
+
 Diccionario::iterator Diccionario::begin() {
     Diccionario::iterator i;
     i.it = datos.begin();
@@ -65,15 +68,15 @@ Diccionario::iterator Diccionario::end() {
 istream & operator>>(istream & is, Diccionario &D) {
     string palabra;
     while (is>>palabra) {
-        D.getDatos().insert(palabra);
+        D.datos.insert(palabra);
     }
     return is;
 }
 
-ostream & operator<<(ostream & os, Diccionario &D) {
+ostream & operator<<(ostream & os, const Diccionario &D) {
     set<string>::const_iterator it;
 
-    for (it = D.getDatos().begin(); it != D.getDatos().end(); ++it) {
+    for (it = D.datos.begin(); it != D.datos.end(); ++it) {
         os << *it << endl;
     }
     return os;
