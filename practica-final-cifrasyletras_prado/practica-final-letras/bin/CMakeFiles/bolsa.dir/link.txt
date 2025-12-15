@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/bolsa.dir/src/bolsa.cpp.o CMakeFiles/bolsa.dir/src/letters_bag.cpp.o CMakeFiles/bolsa.dir/src/letters_set.cpp.o CMakeFiles/bolsa.dir/src/dictionary.cpp.o CMakeFiles/bolsa.dir/src/testdiccionario.cpp.o CMakeFiles/bolsa.dir/src/bag.cpp.o  -o bolsa 

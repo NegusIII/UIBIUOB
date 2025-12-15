@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/testdiccionario.dir/src/testdiccionario.cpp.o CMakeFiles/testdiccionario.dir/src/dictionary.cpp.o  -o testdiccionario 

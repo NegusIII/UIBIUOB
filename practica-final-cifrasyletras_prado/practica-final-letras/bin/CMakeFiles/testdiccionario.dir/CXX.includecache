@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/dictionary.h
+set
+-
+string
+-
+vector
+-
+
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/src/dictionary.cpp
+dictionary.h
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/src/dictionary.h
+set
+-
+string
+-
+iostream
+-
+
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/src/testdiccionario.cpp
+fstream
+-
+iostream
+-
+string
+-
+vector
+-
+dictionary.h
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/src/dictionary.h
+

@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica final - Juego de las Letras"
+OUTPUT_DIRECTORY       = /home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/bin/doc_doxygen/
+INPUT                  = /home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/./include /home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/./src /home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/./doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/./doc
+EXTRACT_PRIVATE	       = NO

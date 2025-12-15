@@ -1,0 +1,7 @@
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/bin/CMakeFiles/rebuild_cache.dir
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/bin/CMakeFiles/edit_cache.dir
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/bin/CMakeFiles/letras.dir
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/bin/CMakeFiles/testdiccionario.dir
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/bin/CMakeFiles/doc_doxygen.dir
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/bin/CMakeFiles/cantidad_letras.dir
+/home/ed/Escritorio/ED_/UIBIUOB/practica-final-cifrasyletras_prado/practica-final-letras/bin/CMakeFiles/bolsa.dir
