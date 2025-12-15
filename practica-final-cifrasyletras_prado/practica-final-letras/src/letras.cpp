@@ -61,7 +61,7 @@ vector<string> Posibles(Diccionario &D, vector<char> letras) {
     return posibles;
 }
 
-vector<string> calcularMejores(int puntuacion, char tipo, LettersSet set, vector<string> posibles) {
+vector<string> calcularMejores(int puntuacion, char tipo, LettersSet set, vector<string> posibles){
     vector<string> soluciones;
     vector<string>::iterator it;
     for (it = posibles.begin(); it != posibles.end(); ++it) {
@@ -72,6 +72,22 @@ vector<string> calcularMejores(int puntuacion, char tipo, LettersSet set, vector
     }
 
     return soluciones;
+}
+
+vector<string>::iterator MejorPuntuacion(int puntuacion, char tipo, LettersSet set, vector<string> posibles) {
+
+    vector<string> soluciones = calcularMejores(puntuacion, tipo, set, posibles);
+    vector<string>::iterator it;
+    vector<string>::iterator mejor;
+    int mejor_puntuacion = 0;
+
+    for (it = soluciones.begin(); it !=soluciones.end(); ++it) {
+        if (Puntuacion(*it, tipo, set) > mejor_puntuacion) {
+            mejor_puntuacion = Puntuacion(*it, tipo, set);
+            mejor = it;
+        }
+    }
+    return mejor;
 }
 
 int main(int argc, char *argv[]) {
@@ -138,7 +154,11 @@ int main(int argc, char *argv[]) {
         for (int i = 0; i < soluciones.size(); i++) {
             cout << left << setw(8) << soluciones[i] << "   Puntuacion:  " << Puntuacion(soluciones[i], argv[4][0], letras_info) << endl;
         }
+        cout << endl;
 
+        vector<string>::iterator mejor = MejorPuntuacion(puntuacion, argv[4][0], letras_info, posibles);
+
+        cout << "La mejor solucion es: " << *mejor << " con una puntuacion de " << Puntuacion(*mejor, argv[4][0], letras_info) << endl;
         string seguir;
         do {
             cout << "¿Quieres seguir jugando? [S/N]: ";
